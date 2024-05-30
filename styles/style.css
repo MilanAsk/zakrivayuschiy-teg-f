@@ -13,8 +13,364 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* @media (min-width: 1440px) {
+  img {
+    width: 696px;
+    height: 696px;
+  }
+} */
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  color: var(--main-color);
+  background-image: var(--gradient-main);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--background-color);
+  font-family: var(--main-font);
+}
+
+.header {
+  background-color: var(--background-color);
+  border: 2px solid var(--main-color);
+  max-width: 696px;
+  margin: 102px auto 100px;
+}
+
+.header-title {
+  font-family: var(--accent-font);
+  font-size: var(--h1-title-size);
+  font-weight: var(--header-weight);
+  line-height: 49px;
+  text-align: center;
+  margin-block-start: 120px;
+  margin-block-end: 20px;
+}
+
+.header-subtitle {
+  text-transform: uppercase;
+  font-family: var(--accent-font);
+  font-size: var(--subtitle-size);
+  font-weight: var(--header-weight);
+  text-align: center;
+  margin-block-end: 25px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: start;
+  margin-left: calc(154px + 161 * ((100vw - 375px) / 1065));
+  margin-bottom: 25px;
+  width: 84px;
+  height: 70px;
+}
+
+@media (min-width: 1440px) {
+  .theme-menu__list {
+    margin: 0 297px 25px 315px;
+  }
+}
+
+.theme-menu__item {
+  margin: 0;
+  padding: 0;
+  height: 14px;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  border: none;
+  font-family: var(--accent-font);
+  font-size: var(--button-size);
+  text-transform: uppercase;
+  font-weight: var(--header-weight);
+  line-height: 14px;
+  position: relative;
+  width: 84px;
+  text-align: start;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  right: 89px;
+  animation: arrow ease-in-out 0.5s alternate infinite;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.card {
+  border: 2px solid var(--main-color);
+  background-color: var(--background-color);
+  max-width: 696px;
+  margin: 0 auto;
+  object-fit: cover;
+  display: grid;
+}
+
+.card-title {
+  font-weight: var(--title-weight);
+  font-size: var(--main-size);
+  margin: 4px 10px 6px 10px;
+  line-height: 21.78px;
+}
+
+.image-with-label {
+  position: relative;
+  margin: 0;
+}
+
+.card-label {
+  position: absolute;
+  z-index: 1;
+  font-family: var(--accent-font);
+  color: var(--main-color);
+  font-weight: var(--text-weight);
+  font-size: 14px;
+  top: 25px;
+  right: calc(13px + 12 * ((100vw - 375px) / 1065));
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  text-shadow: var(--text-shadow);
+}
+
+@supports (
+  (text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))
+) {
+  .card-label {
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+    text-shadow: none;
+  }
+}
+
+.card-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  margin: 25px;
+}
+
+.card-text {
+  font-weight: var(--text-weight);
+  font-size: var(--main-size);
+  font-family: Inter;
+  line-height: 21px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+  height: 38px;
+  margin-inline-end: 25px;
+  margin-block-end: 25px;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--main-color);
+}
+
+.card__icon-button:hover {
+  cursor: pointer;
+}
+
+.card__like-button {
+  background-color: transparent;
+  border: none;
+  width: 130px;
+  height: 38px;
+  border: 2px solid var(--main-color);
+  display: inline-block;
+}
+
+.button__text {
+  font-family: var(--accent-font);
+  font-weight: var(--text-weight);
+  font-size: var(--button-size);
+  line-height: 12.6px;
+  mix-blend-mode: difference;
+  color: var(--button-color);
+  align-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.like-button {
+  outline: none;
+  position: relative;
+  font-family: var(--accent-font);
+  background-color: var(--background-color);
+  border: 2px solid var(--main-color);
+  text-align: center;
+  justify-content: center;
+}
+
+.like-button:hover {
+  cursor: pointer;
+}
+
+.main-button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--main-color);
+}
+
+.like-button::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s ease-in-out;
+  inset: 0;
+}
+
+.like-button:hover::before {
+  transform: scaleX(1);
+}
+
+.superman {
+  filter: invert(20%);
+}
+
+.papich {
+  filter: sepia(200%) brightness(60%);
+}
+
+.papich-lego {
+  filter: invert(20%);
+}
+
+.kitty {
+  filter: contrast(110%);
+}
+
+.vjlink {
+  filter: blur(5px);
+}
+
+.lifesaver {
+  filter: hue-rotate(300deg);
+}
+
+.bunny {
+  filter: invert(20%) contrast(120%);
+}
+
+.end-save {
+  margin: 0 auto 105px auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.floppy-icon {
+  width: 21px;
+  height: 21px;
+  /* mix-blend-mode: difference; */
+  color: var(--button-color);
+}
+
+.floppy-dialog-icon {
+  min-width: 39px;
+  color: var(--main-color);
+}
+
+.save-button {
+  display: flex;
+  gap: 8px;
+  padding: 15px 20px;
+  align-items: center;
+}
+
+.dialog {
+  padding: 30px;
+  max-width: 357px;
+  position: fixed;
+  inset: 0;
+  background-color: var(--background-color);
+  border: 2px solid var(--main-color);
+}
+
+.dialog-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 30px;
+}
+
+.dialog-button {
+  width: 100%;
+  height: 100%;
+  padding: 9px 17px;
+  font-size: var(--button-size);
+  border: 2px solid var(--main-color);
+  text-transform: uppercase;
+  line-height: 12.6px;
+  color: var(--main-color);
+}
+
+.dialog-text {
+  font-family: var(--accent-font);
+  font-size: var(--button-size);
+  color: var(--main-color);
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+@media (max-width: 375px) {
+  .save-button {
+    flex-direction: column;
+  }
+
+  .floppy-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dialog {
+    max-width: 341px;
+  }
 }
