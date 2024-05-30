@@ -53,3 +53,30 @@
   --fill-active: rgba(255, 0, 0, 1);
   --button-color: rgba(0, 204, 20, 1);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root.theme-dark {
+    --accent-font: 'Press Start 2P';
+    --main-color: rgba(0, 204, 20, 1);
+    --background-color: rgba(0, 0, 0, 1);
+    --main-font: 'Inter';
+    --header-weight: 465;
+    --title-weight: 785;
+    --main-size: 18px;
+    --text-weight: 400;
+    --h1-title-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --subtitle-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --button-size: 14px;
+    --horizontal-gradient: repeating-linear-gradient(90deg, #1a1a1a 0 2px, transparent 2px 4px);
+    --vertical-gradient: repeating-linear-gradient(to bottom, #1a1a1a 0 2px, transparent 2px 4px);
+    --vertical-second-gradient: linear-gradient(to bottom, #007f0c, #004306);
+    --gradient-main: var(--horizontal-gradient), var(--vertical-gradient),
+      var(--vertical-second-gradient);
+    --text-shadow: -1px 0 var(--bg-color), 0 1px var(--bg-color), 1px 0 var(--bg-color),
+      0 -1px var(--bg-color);
+    --fill-contour: rgba(0, 204, 20, 1);
+    --fill-sparks: rgba(255, 0, 0, 1);
+    --fill-active: rgba(255, 0, 0, 1);
+    --button-color: rgba(0, 204, 20, 1);
+  }
+}
