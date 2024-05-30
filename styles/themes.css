@@ -55,7 +55,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root.theme-dark {
+  :root {
     --accent-font: 'Press Start 2P';
     --main-color: rgba(0, 204, 20, 1);
     --background-color: rgba(0, 0, 0, 1);
