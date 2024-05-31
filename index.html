@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="./styles/themes.css" />
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
     <header class="header">
-      <h1 class="header-title">&#60;/HTML&#62;</h1>
-      <h2 class="header-subtitle">Закрывающий тег</h2>
+      <a class="header-logo">
+        <span class="logo-text">&#60;/HTML&#62;</span>
+      </a>
+      <h1 class="header-subtitle">Закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -38,9 +41,9 @@
     </header>
     <main class="main">
       <article class="card">
-        <h3 class="card-title">Фритрек и&nbsp нулевой спринт: Подготовка к&nbsp работе</h3>
+        <h2 class="card-title">Фритрек и&nbsp; нулевой спринт: Подготовка к&nbsp; работе</h2>
         <div class="image-with-label">
-          <img src="./images/superman-trevor.png" alt="супермен Тревор" class="superman" />
+          <img src="./images/superman-trevor.png" alt="супермен Тревор" class="image invert" />
           <p class="card-label">&#60;/HTML&#62;</p>
         </div>
         <div class="card-paragraph">
@@ -51,14 +54,15 @@
           <p class="card-text">Прилив бодрости и сил. Готов к испытаниям.</p>
         </div>
         <div class="buttons">
-          <button class="card__icon-button" type="button">
+          <button class="card__icon-button" type="button" aria-label="сердечко">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
               width="39"
               height="36"
               fill="none"
-              viewBox="0 0 39 36">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g clip-path="url(#a)" class="heart">
                 <path
                   class="contour"
@@ -80,7 +84,7 @@
 
               <defs>
                 <clipPath id="a">
-                  <path fill="#fff" d="M0 0h39v36H0z" />
+                  <path fill="var(--main-color)" d="M0 0h39v36H0z" />
                 </clipPath>
               </defs>
             </svg>
@@ -91,9 +95,13 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card-title">1 спринт: Я — чистый лист</h3>
+        <h2 class="card-title">1 спринт: Я — чистый лист</h2>
         <div class="image-with-label">
-          <img src="./images/papich.png" alt="папич в гневе" class="papich" />
+          <img
+            src="./images/papich.png"
+            alt="папич в гневе"
+            class="image sepia-brightnes"
+            loading="lazy" />
           <p class="card-label">&#60;/HTML&#62;</p>
         </div>
         <div class="card-paragraph">
@@ -106,14 +114,15 @@
           <p class="card-text">Отрицание. Гнев. Принятие. Задание принято - отличная работа.</p>
         </div>
         <div class="buttons">
-          <button class="card__icon-button" type="button">
+          <button class="card__icon-button" type="button" aria-label="сердечко">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
               width="39"
               height="36"
               fill="none"
-              viewBox="0 0 39 36">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g clip-path="url(#a)" class="heart">
                 <path
                   class="contour"
@@ -146,9 +155,13 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card-title">2 спринт: Погоня за идеалом</h3>
+        <h2 class="card-title">2 спринт: Погоня за идеалом</h2>
         <div class="image-with-label">
-          <img src="./images/papich-lego.png" alt="папич лего" class="papich-lego" />
+          <img
+            src="./images/papich-lego.png"
+            alt="папич лего"
+            class="image invert-contrast"
+            loading="lazy" />
           <p class="card-label">&#60;/HTML&#62;</p>
         </div>
         <div class="card-paragraph">
@@ -161,14 +174,15 @@
           <p class="card-text">Трудно, но не сдаемся.</p>
         </div>
         <div class="buttons">
-          <button class="card__icon-button" type="button">
+          <button class="card__icon-button" type="button" aria-label="сердечко">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
               width="39"
               height="36"
               fill="none"
-              viewBox="0 0 39 36">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g clip-path="url(#a)" class="heart">
                 <path
                   class="contour"
@@ -201,9 +215,9 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card-title">2 спринт: О тех, кто рядом</h3>
+        <h2 class="card-title">2 спринт: О тех, кто рядом</h2>
         <div class="image-with-label">
-          <img src="./images/kitty.png" alt="милый котик" class="kitty" />
+          <img src="./images/kitty.png" alt="милый котик" class="image contrast" loading="lazy" />
           <p class="card-label">&#60;/HTML&#62;</p>
         </div>
         <div class="card-paragraph">
@@ -216,14 +230,15 @@
           <p class="card-text">Тут спасибо моей Дашеньке&#x2665;</p>
         </div>
         <div class="buttons">
-          <button class="card__icon-button" type="button">
+          <button class="card__icon-button" type="button" aria-label="сердечко">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
               width="39"
               height="36"
               fill="none"
-              viewBox="0 0 39 36">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g clip-path="url(#a)" class="heart">
                 <path
                   class="contour"
@@ -256,9 +271,13 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card-title">3 спринт: Обходные стратегии</h3>
+        <h2 class="card-title">3 спринт: Обходные стратегии</h2>
         <div class="image-with-label">
-          <img src="./images/vjlink.png" alt="рыжий рвет футболку как сф" class="vjlink" />
+          <img
+            src="./images/vjlink.png"
+            alt="рыжий рвет футболку как сф"
+            class="image blur"
+            loading="lazy" />
           <p class="card-label">&#60;/HTML&#62;</p>
         </div>
         <div class="card-paragraph">
@@ -269,14 +288,15 @@
           <p class="card-text">Бл***, да как это ****** я его *****.</p>
         </div>
         <div class="buttons">
-          <button class="card__icon-button" type="button">
+          <button class="card__icon-button" type="button" aria-label="сердечко">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
               width="39"
               height="36"
               fill="none"
-              viewBox="0 0 39 36">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g clip-path="url(#a)" class="heart">
                 <path
                   class="contour"
@@ -309,9 +329,9 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card-title">3 спринт: Когда опускаются руки</h3>
+        <h2 class="card-title">3 спринт: Когда опускаются руки</h2>
         <div class="image-with-label">
-          <img src="./images/lifesaver.png" alt="пиво спасает" class="lifesaver" />
+          <img src="./images/lifesaver.png" alt="пиво спасает" class="image hue" loading="lazy" />
           <p class="card-label">&#60;/HTML&#62;</p>
         </div>
         <div class="card-paragraph">
@@ -324,14 +344,15 @@
           <p class="card-text">Со светлым пивом темное будущее не так страшно.</p>
         </div>
         <div class="buttons">
-          <button class="card__icon-button" type="button">
+          <button class="card__icon-button" type="button" aria-label="сердечко">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
               width="39"
               height="36"
               fill="none"
-              viewBox="0 0 39 36">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g clip-path="url(#a)" class="heart">
                 <path
                   class="contour"
@@ -364,9 +385,13 @@
         </div>
       </article>
       <article class="card">
-        <h3 class="card-title">«Сейчас я здесь»</h3>
+        <h2 class="card-title">«Сейчас я здесь»</h2>
         <div class="image-with-label">
-          <img src="./images/bunny.png" alt="багс банни без сердца" class="bunny" />
+          <img
+            src="./images/bunny.png"
+            alt="багс банни без сердца"
+            class="image invert-contrast-brightness"
+            loading="lazy" />
           <p class="card-label">&#60;/HTML&#62;</p>
         </div>
         <div class="card-paragraph">
@@ -380,14 +405,15 @@
           <p class="card-text">Все обязательно получится!</p>
         </div>
         <div class="buttons">
-          <button class="card__icon-button" type="button">
+          <button class="card__icon-button" type="button" aria-label="сердечко">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="like-icon"
               width="39"
               height="36"
               fill="none"
-              viewBox="0 0 39 36">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g clip-path="url(#a)" class="heart">
                 <path
                   class="contour"
@@ -443,7 +469,7 @@
             class="dialog-button like-button"
             type="button"
             onclick="window['dialog-id'].close()">
-            ок
+            <span class="dialog-button-text">ок</span>
           </button>
         </form>
       </dialog>

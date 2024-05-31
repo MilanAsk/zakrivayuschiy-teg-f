@@ -34,10 +34,10 @@
   --main-color: rgba(0, 204, 20, 1);
   --background-color: rgba(0, 0, 0, 1);
   --main-font: 'Inter';
-  --header-weight: 465;
+  --header-weight: 400;
   --title-weight: 785;
   --main-size: 18px;
-  --text-weight: 400;
+  --text-weight: 465;
   --h1-title-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --subtitle-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --button-size: 14px;
@@ -60,10 +60,10 @@
     --main-color: rgba(0, 204, 20, 1);
     --background-color: rgba(0, 0, 0, 1);
     --main-font: 'Inter';
-    --header-weight: 465;
+    --header-weight: 400;
     --title-weight: 785;
     --main-size: 18px;
-    --text-weight: 400;
+    --text-weight: 465;
     --h1-title-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     --subtitle-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
     --button-size: 14px;
